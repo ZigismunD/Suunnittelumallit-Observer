@@ -41,6 +41,7 @@ public class ClockTimer  extends Observable implements Runnable {
     }
     
     public String getTime() {
+        
         if (second == 59 && minute == 59 && hour == 23) {
             second = 0;
             minute = 0;

@@ -12,7 +12,10 @@ package observer;
 public class MyApp {
     
     public static void main(String[] args) {
-       new DigitalClock();
+        ClockTimer timer = new ClockTimer();
+       new DigitalClock(timer);
+       new ShadyClock(timer);
+       new Thread(timer).start();
         
         
         

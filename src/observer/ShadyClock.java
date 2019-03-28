@@ -12,10 +12,10 @@ import java.util.Observer;
  *
  * @author zigis
  */
-public class DigitalClock implements Observer {
+public class ShadyClock implements Observer {
     ClockTimer timer;
     
-    public DigitalClock(ClockTimer ct) {
+    public ShadyClock(ClockTimer ct) {
         timer = ct;
         timer.addObserver(this);
         //timer.run();
@@ -24,7 +24,6 @@ public class DigitalClock implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        System.out.println("Kellonaika: " + arg);
+        System.out.println("Shadyaika: " + arg);
     }
-    
 }
